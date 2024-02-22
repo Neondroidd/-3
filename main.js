@@ -1,14 +1,12 @@
-window.onload = () => {
-      document.body.classList.remove("container");
+ window.onload = () => {
+            // Prompt the user for their name
+            const userName = prompt("Masukkan namamu:");
 
-      // Prompt the user for their name
-      const userName = prompt("What's your name?");
-
-      // Display the user's name in the "name" class
-      const nameElement = document.querySelector('.name');
-      if (nameElement) {
-        nameElement.textContent = `Hello, ${userName || 'Guest'}!`;
-      }
+            // Display the user's name in the "Name" span
+            const nameElement = document.querySelector('.Name');
+            if (nameElement) {
+                nameElement.textContent = userName || 'Tamu';
+            }
 
       const audio = new Audio("./Music/Main.mp3");
       audio.play();
